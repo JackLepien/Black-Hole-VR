@@ -722,15 +722,7 @@ MonoBehaviour:
   resetHmdPoseOnRelease: 1
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
-  activateKeyBindings:
-  - <Keyboard>/leftCtrl
-  - <Keyboard>/rightCtrl
-  - <Keyboard>/f1
   pitchKeys: 3401000033010000
-  pitchKeyBindings:
-  - <Keyboard>/leftAlt
-  - <Keyboard>/rightAlt
-  - <Keyboard>/f2
 --- !u!114 &675828557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,16 +1555,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 38.848
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 38.848
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 38.848
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5348496
+      value: -0.000000070497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.1970925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.93206
+      value: 0.00000010575
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
       propertyPath: m_LocalRotation.w
