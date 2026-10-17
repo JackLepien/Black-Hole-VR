@@ -18,6 +18,13 @@ A full backup of Assets / ProjectSettings / Packages was taken before this was a
 5. In the duplicate graph, replace the Scene Color node (see chat for wiring).
 6. Build to Quest 3 (the simulator has no camera feed; the effect simply shows nothing there).
 
+## Capture mode (optional; for screenshots / recordings)
+Headset captures normally omit the system passthrough layer, so everything except the black hole shows black.
+- `PassthroughCaptureBackground.cs` + `PassthroughCaptureBackground.shader` draw the passthrough camera image across the whole view.
+- Add the component to the same object as `PassthroughLensDriver` in the PCA scene. Tick **Capture Mode** BEFORE pressing Play / building (the tick is baked into a build). Leave it off for normal use.
+- While on, you see the lower-resolution camera image instead of the live passthrough.
+- Match **Assumed Distance** / **Invert Y** / **Flip V** to the lens settings so the lens blends into the background.
+
 ## Tuning (in-headset)
 - Image upside-down: toggle `FlipV`. Lens bends the wrong way vertically: toggle `InvertY`.
 - Real objects seem to shift near the lens edge: adjust `AssumedDistance` to roughly how far away the room content is.

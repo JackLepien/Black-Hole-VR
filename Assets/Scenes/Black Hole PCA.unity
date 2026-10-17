@@ -2192,7 +2192,6 @@ GameObject:
   - component: {fileID: 628888656}
   - component: {fileID: 628888655}
   - component: {fileID: 628888658}
-  - component: {fileID: 628888659}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2318,21 +2317,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &628888659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 628888654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40f2e2af8365e84e877df3d8315c373, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimpleCamera
-  moveSpeed: 10
-  mouseSensitivity: 100
-  clampAngle: 85
 --- !u!1 &664083596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,7 +2994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &837784958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7109,6 +7093,7 @@ GameObject:
   - component: {fileID: 1816634261}
   - component: {fileID: 1816634260}
   - component: {fileID: 1816634263}
+  - component: {fileID: 1816634264}
   m_Layer: 0
   m_Name: '[BuildingBlock] Passthrough Camera Access'
   m_TagString: Untagged
@@ -7179,6 +7164,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PassthroughLensing.PassthroughLensDriver
   cameraAccess: {fileID: 1816634260}
+--- !u!114 &1816634264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816634259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd277cc682a3e54dac539e9dc2b4b31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassthroughLensing.PassthroughCaptureBackground
+  captureMode: 0
+  shader: {fileID: 4800000, guid: 199b3cca160c06a409f860314591b30a, type: 3}
+  assumedDistance: 3
+  opacity: 1
+  invertY: 0
+  flipV: 0
 --- !u!1 &1823786014
 GameObject:
   m_ObjectHideFlags: 0
@@ -7582,7 +7585,15 @@ MonoBehaviour:
   resetHmdPoseOnRelease: 1
   resetHmdPoseByMiddleMouseButton: 1
   activateKeys: 3201000031010000
+  activateKeyBindings:
+  - <Keyboard>/leftCtrl
+  - <Keyboard>/rightCtrl
+  - <Keyboard>/f1
   pitchKeys: 3401000033010000
+  pitchKeyBindings:
+  - <Keyboard>/leftAlt
+  - <Keyboard>/rightAlt
+  - <Keyboard>/f2
 --- !u!114 &1838298020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9019,7 +9030,7 @@ PrefabInstance:
     - target: {fileID: 2878553058042080344, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: -876546973899608171, guid: 3ce70c2434fa0fe4c9198a8cd7606119, type: 3}
+      objectReference: {fileID: 2100000, guid: 8d890ed1ed2fb8b49beb6143185c0eac, type: 2}
     - target: {fileID: 4015381408706565943, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: m_LocalScale.x
       value: 38.848
@@ -9034,15 +9045,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4015381408706565943, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.503
+      value: -1.324
       objectReference: {fileID: 0}
     - target: {fileID: 4015381408706565943, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.535
+      value: 1.331
       objectReference: {fileID: 0}
     - target: {fileID: 4015381408706565943, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.323
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4015381408706565943, guid: 88cd141723a28d047b53c6616e9b680c, type: 3}
       propertyPath: m_LocalRotation.w
