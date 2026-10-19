@@ -109,7 +109,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ScreenSpaceScale: 26.6
+    - _ScreenSpaceScale: 26
     - _Screen_Space_Calc_ON: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

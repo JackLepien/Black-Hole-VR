@@ -70,10 +70,61 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d6dad2911b1108d46aaab5a431af30be, type: 2}
     - target: {fileID: 919132149155446097, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
       propertyPath: m_Name
-      value: BlackHole_InvertedNormals
+      value: Black Hole Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 184832559326118775}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2872761782706708054}
   m_SourcePrefab: {fileID: 100100000, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+--- !u!1 &4391661309877931405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 85d3d6a8b6442e14dbbf157cc83d0b19, type: 3}
+  m_PrefabInstance: {fileID: 3473182824680714460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &184832559326118775
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391661309877931405}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.006303571
+  m_Center: {x: 0.0000000023283062, y: 0, z: -0.0000000027939675}
+--- !u!114 &2872761782706708054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4391661309877931405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14b04bc0c690964b962ece96c524e13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OnContactSceneTransition
+  sceneToLoad: NextScene
+  transitionDelay: 0.5
+  contactTargets: []
+  contactPadding: 0
+  fadeTransition: 1
+  fadeTime: 1
+  playerPositionObject: {fileID: 0}
