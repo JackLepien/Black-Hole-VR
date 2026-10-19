@@ -46,6 +46,9 @@ namespace BlackHoleMotion
         private State[] _states;
         private float _elapsed;
 
+        /// <summary>True once every hole has reached its final distance from the player.</summary>
+        public bool HasConverged { get; private set; }
+
         private void Start()
         {
             Initialize();
@@ -110,6 +113,7 @@ namespace BlackHoleMotion
                 };
             }
             _elapsed = 0f;
+            HasConverged = false;
         }
 
         private void Update()
@@ -137,6 +141,12 @@ namespace BlackHoleMotion
                 float radius = Mathf.Lerp(s.StartRadius, finalDistance, k);
                 Vector3 offset = Quaternion.AngleAxis(s.Angle, s.Axis) * s.StartDirection * radius;
                 s.Hole.localPosition = focusOffset + offset;
+            }
+
+            // All holes share the same progress value, so they arrive together
+            if (u >= 1f)
+            {
+                HasConverged = true;
             }
         }
 
